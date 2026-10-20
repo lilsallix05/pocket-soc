@@ -1,0 +1,9 @@
+<!-- Copy into /var/ossec/etc/rules/local_rules.xml after resolving ID collisions. -->
+<group name="pocket_soc,">
+  <rule id="100101" level="8">
+    <decoded_as>json</decoded_as>
+    <field name="event_type">^alert$</field>
+    <field name="alert.signature_id">^1000001$</field>
+    <description>Pocket SOC authorised synthetic marker observed</description>
+  </rule>
+</group>

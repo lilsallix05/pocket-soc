@@ -1,0 +1,6 @@
+[project]
+name = "pdpa-pocket-soc"
+version = "1.0.0"
+description = "Local incident desk, sensor log adapters and breach readiness exercises"
+requires-python = ">=3.11"
+dependencies = []

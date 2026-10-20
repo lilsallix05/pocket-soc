@@ -1,0 +1,12 @@
+# Merge into your installed Suricata configuration; not a replacement configuration.
+# Keep other distribution defaults, including HOME_NET and app-layer parsers.
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: regular
+      filename: eve.json
+      types:
+        - alert
+        - flow
+rule-files:
+  - pocket.rules

@@ -1,0 +1,12 @@
+{
+  "name": "pocket-soc-browser-checks",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test:browser": "node tests/browser-check.cjs",
+    "test:responsive": "node tests/responsive-check.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

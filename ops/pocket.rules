@@ -1,0 +1,2 @@
+# Harmless marker for an authorised local packet replay only. This is NOT an exfiltration detector.
+alert http any any -> any any (msg:"POCKET SOC synthetic marker"; flow:established,to_server; http.uri; content:"/pocket-soc-test"; sid:1000001; rev:1;)

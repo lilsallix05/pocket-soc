@@ -1,0 +1,22 @@
+[Unit]
+Description=Pocket SOC read-only Suricata collector
+After=network.target suricata.service
+
+[Service]
+Type=simple
+User=pocketsoc
+Group=pocketsoc
+SupplementaryGroups=suricata
+WorkingDirectory=/opt/pocket-soc
+ExecStart=/usr/bin/python3 /opt/pocket-soc/ops/tail_ingest.py --source suricata --file /var/log/suricata/eve.json --db /var/lib/pocket-soc/pocket-soc.sqlite --checkpoint /var/lib/pocket-soc/suricata-offset.json --follow
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/pocket-soc
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
