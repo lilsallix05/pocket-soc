@@ -6,6 +6,10 @@ A local incident desk for small organisations in Malaysia that need to handle a 
 
 A SOC (security operations centre) is usually a team with a SIEM and a budget. A clinic or a small office has neither, but it still has a 72-hour planning window once it becomes aware of a breach. Pocket SOC is the smallest useful version: one operator, one laptop, one record that holds the logs, the decisions and the draft together.
 
+## The attack
+
+The practice incident is data leaving a small clinic: a large outbound transfer that shows up across Zeek connection logs, Suricata alerts and Wazuh host events. Pocket SOC follows it from the first signal, through the decision record, to the moment someone has to decide whether Malaysia's breach-notification duty applies.
+
 ## What it does
 
 - **Keeps an incident register.** Each incident has an owner, a status, a response checklist and a timeline. Every change is appended to a hash-linked audit trail.
